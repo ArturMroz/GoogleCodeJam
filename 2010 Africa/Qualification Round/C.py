@@ -13,7 +13,7 @@ keys = {
 T9 = {c: k * (i + 1) for k, v in keys.items() for i, c in enumerate(v)}
 
 for tc in range(int(input())):
-    line = input()[:-1]  # cut out '\n'
+    line = input()
     text = ''
     for c in line:
         if text and text[-1] == T9[c][0]:  # add space if same button

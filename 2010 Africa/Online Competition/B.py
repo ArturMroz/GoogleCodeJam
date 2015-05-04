@@ -4,9 +4,9 @@
 for tc in range(int(input())):
     n, t = map(int, input().split())
     e = int(input())
+    a = [tuple(map(int, input().split())) for i in range(e)]
     imp = False
     ans = [0] * n
-    a = [tuple(map(int, input().split())) for i in range(e)]
 
     for i in range(n):
         if i + 1 == t:
