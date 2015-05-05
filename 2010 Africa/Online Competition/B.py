@@ -23,5 +23,5 @@ for tc in range(int(input())):
             else:
                 curr = curr[driver[1] - 1:]
 
-    ans = "IMPOSSIBLE" if imp else ' '.join(map(str, ans))
-    print("Case #{}: {}".format(tc + 1, ans))
+    ans = 'IMPOSSIBLE' if imp else ' '.join(map(str, ans))
+    print('Case #{}: {}'.format(tc + 1, ans))

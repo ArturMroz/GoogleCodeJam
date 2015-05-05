@@ -15,4 +15,4 @@ for tc in range(int(input())):
     for i, c in enumerate(s):
         num += d[c] * b ** (len(s) - i - 1)
 
-    print("Case #{}: {}".format(tc + 1, num))
+    print('Case #{}: {}'.format(tc + 1, num))
