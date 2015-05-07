@@ -1,0 +1,81 @@
+{
+	"build_systems":
+	[
+		{
+			"name": "Py Code Jam",
+			"selector": "source.python",
+			"shell_cmd": "python -u \"$file\"",
+			"variants":
+			[
+				{
+					"name": "i large",
+					"shell_cmd": "python -u \"$file\" <$file_base_name-large-practice.in"
+				},
+				{
+					"name": "io large",
+					"shell_cmd": "python -u \"$file\" <$file_base_name-large-practice.in >$file_base_name-large-practice.txt"
+				},
+				{
+					"name": "i small",
+					"shell_cmd": "python -u \"$file\" <$file_base_name-small-practice.in"
+				},
+				{
+					"name": "io small",
+					"shell_cmd": "python -u \"$file\" <$file_base_name-small-practice.in >$file_base_name-small-practice.txt"
+				}
+			]
+		},
+		{
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+			"name": "C++ Code Jam",
+			"selector": "source.c, source.c++",
+			"shell_cmd": "g++ \"${file}\" -o \"${file_path}/${file_base_name}\"",
+			"variants":
+			[
+				{
+					"name": "i small",
+					"shell_cmd": "g++ \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" <$file_base_name-small-practice.in"
+				},
+				{
+					"name": "io small",
+					"shell_cmd": "g++ \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" <$file_base_name-small-practice.in >$file_base_name-small-practice.txt"
+				},
+				{
+					"name": "i large",
+					"shell_cmd": "g++ \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" <$file_base_name-large-practice.in"
+				},
+				{
+					"name": "io large",
+					"shell_cmd": "g++ \"${file}\" -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\" <$file_base_name-large-practice.in >$file_base_name-large-practice.txt"
+				}
+			],
+			"working_dir": "${file_path}"
+		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "python -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.txt",
+				"*.in"
+			],
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"font_size": 10,
+		"rulers":
+		[
+			80
+		],
+		"translate_tabs_to_spaces": true
+	}
+}

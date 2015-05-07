@@ -8,7 +8,7 @@ for tc in range(int(input())):
     d[0] = 1
 
     for c in s:
-        for i in range(len(p) - 1, -1, -1):
+        for i in range(len(p)):
             if c == p[i]:
                 d[i + 1] += d[i]
 
