@@ -24,7 +24,7 @@ def add_children(h, n):
     added = 0
     for j in range(n):
         curr = h
-        D = input()[1:-1].split('/')
+        D = input()[1:].split('/')
         for d in D:
             child = curr.get_child(d)
             if not child:
@@ -36,10 +36,6 @@ def add_children(h, n):
 
 for tc in range(int(input())):
     n, m = map(int, input().split())
-    added = 0
-
     h = Node('/')
     add_children(h, n)
-    added = add_children(h, m)
-
-    print('Case #{}: {}'.format(tc + 1, added))
+    print('Case #{}: {}'.format(tc + 1, add_children(h, m)))
