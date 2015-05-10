@@ -1,6 +1,6 @@
 for tc = 1:int(readline())
     n = int(readline())
-    a = [map(int, split(readline())) for _ = 1:n]
+    a = Vector{Int}[map(int, split(readline())) for _ = 1:n]
     ans = 0
 
     for (i, x) in enumerate(a)
