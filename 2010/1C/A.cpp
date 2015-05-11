@@ -1,3 +1,6 @@
+// Rope Intranet
+// https://code.google.com/codejam/contest/619102/dashboard#s=p0
+
 #include <iostream>
 using namespace std;
 
