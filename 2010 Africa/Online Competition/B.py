@@ -11,8 +11,7 @@ for tc in range(int(input())):
     for i in range(n):
         if i + 1 == t:
             continue
-        curr = [x for x in a if x[0] == i + 1]
-        curr.sort(key=lambda x: x[1])
+        curr = sorted((x for x in a if x[0] == i + 1), key=lambda x: x[1])
         while not imp and curr:
             ans[i] += 1
             driver = curr.pop()

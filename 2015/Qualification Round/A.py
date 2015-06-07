@@ -4,7 +4,7 @@
 for tc in range(int(input())):
     a = map(int, input().split()[1])
     t = ans = 0
-    
+
     for i, x in enumerate(a):
         if x > 0 and i > t:
             d = i - t
